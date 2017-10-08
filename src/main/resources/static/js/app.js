@@ -38,10 +38,9 @@ var app = (function () {
         this.author = _nomAuthor;
         this.points = _puntos;
     };
-    var probar = function () {
+    var realizarPut = function () {
         var bps = new BluePrint();
         var put = api.chainedPromises(bps);
-        console.log(put);
         put.then(
                 function () {
                     console.info("OK");
@@ -96,7 +95,7 @@ var app = (function () {
             ctx.closePath();
         },
         put: function () {
-            probar()
+            realizarPut()
                     .then(app.actualizarListadoPlanos(document.getElementById('autor').value));
         },
         Delete: function () {
