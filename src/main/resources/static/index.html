@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <title>Blueprints</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="/webjars/jquery/jquery.min.js"></script>
+        <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/apimock.js"></script>
+        <script src="js/apiclient.js"></script>
+        <script src="js/app.js"></script>        
+        <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/design.css" />
+        <link rel="stylesheet" href="css/design.css" type="text/css">
+
+        <!-- Bootstrap core CSS -->
+    </head>
+    <body onload="app.init()">
+        <div id="ti">
+            <h1><em>BluePrints</em></h1>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div id="author">
+            Author: <input type="text" id="autor"> 
+            <!--<button onclick="app.verAutor(document.getElementById('author').value)">Get Blueprints</button>-->
+            <button id="get" onclick="app.actualizarListadoPlanos(document.getElementById('autor').value)"><b>Get Blueprints</b></button>
+            <button id="create" onclick="app.crearBlueprintClick(document.getElementById('autor').value)"><b>Create new blueprint</b></button>
+            <p></p>
+        </div>
+        <div class="contenedor">
+            <h1> <em id="titulo">BluePrints Draw: </em></h1>
+            <hr>
+            <canvas id="myCanvas" width="500" height="300" style="border:1px solid #d3d3d3;"></canvas>
+            <br>
+            <button id="save" style="text-align: right" onclick="app.put()"><b>Save/Update</b></button>
+            <button id="delete" style="text-align: right" onclick="app.Delete()"><b>Delete</b></button>
+
+        </div>
+        <table id="t" class="table table-bordered table-inverse">
+            <caption> <em>Blueprints </em></caption>
+            <thead>             
+                <tr class="info">
+                    <th>BluePrint name</th>
+                    <th>Number of points</th>
+                    <th>View</th>
+                </tr>
+            </thead>  
+            <tbody id ="tabla">
+            </tbody>
+        </table>
+        <div >
+            <h2><em id="totalPuntos">Total user points:</em></h2>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,12 @@
+﻿Respuestas parte III.
+
+Dentro de InMemoryBlueprintPersistence si existen elementos que podrian fallar 
+concurrentemente al momento en que le lleguen dos o mas solicitudes GET y PUT al mismo tiempo.
+
+La condición de carrera se podria presentar mientras que alguien intenta
+crear, o acceder a un BluePrint alguien mas puede estar agregando
+o modificando elementos.
+
+La region crítica se puede dar en InMemoryBlueprintPersistence en cualquiera de sus metodos ya que en su mayoria son set o get,usando contenedores para los planos que sean concurrentes como lo es un ConcurrentHashMap.
+
+Los verbos REST asociados a la region critica serian GET, PUT y POST.

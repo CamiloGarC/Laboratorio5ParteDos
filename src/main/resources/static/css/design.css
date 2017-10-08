@@ -1,0 +1,73 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+/*filas de la tabla*/
+td{ 
+    border:1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #F5EFFB;
+    
+}
+th{
+    border:1px solid black;
+    border-collapse: collapse;
+    text-align-last: center;
+}
+tr{
+    text-align: end;
+}
+/*titulo de la tabla*/
+caption{
+    text-align-last: center;
+    color: blue;
+    font-family: cursive;
+    font-size:200%;
+}
+/*fondo titulo pagina-raya*/
+#t{width:50%; height:50%}
+#ti{background-color: lightblue;}
+/**/
+.contenedor{
+    box-sizing:border-box;
+    float:right;
+    width:50%;
+    padding:10px;
+    text-align-last: center;
+    text-decoration: blue;
+}
+/*titulo pagina y titulo canvas*/
+h1{
+    text-align-last: center;
+    color: blue;
+    font-family: cursive;
+}
+button{
+    background-color: lightblue;
+    border-radius: 12px;
+    
+}
+#create{
+    background-color: #F5A9F2;
+}
+#save{
+    background-color: #DA81F5
+}
+#delete{
+    background-color: #9FF781;
+}
+
+button:hover{
+    background-color: #8181F7; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+h2{
+    text-align-last: center;
+    color: blue;
+    font-family: cursive;
+}
+
